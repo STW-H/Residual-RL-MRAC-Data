@@ -1,0 +1,28 @@
+{
+  "critic_initialization_seed": 17,
+  "actor_update": 1886,
+  "external_torque_Nm": [
+    0,
+    0
+  ],
+  "activation_time_s": 20,
+  "sample_time_s": 0.02,
+  "tracking_error_at_activation_rad_rad_rad_per_s_rad_per_s": [
+    8.270340748423033e-05,
+    -0.0004429791570066677,
+    6.30864344167148e-05,
+    -0.000347762511944405
+  ],
+  "lyapunov_value_at_activation": 8.513509581806872e-09,
+  "sublevel_set_value_c": 2.8944927063147094e-05,
+  "c_min": 2.8276811014434776e-05,
+  "c_max": 2.9613043111859412e-05,
+  "initial_position_error_box_radius_per_joint_rad": [
+    0.01,
+    0.01
+  ],
+  "initial_velocity_error_box_radius_per_joint_rad_per_s": [
+    0.1,
+    0.1
+  ]
+}

@@ -1,0 +1,29 @@
+{
+  "critic_initialization_seed": 17,
+  "batch_size": 512,
+  "actor_update_for_tracking": 1886,
+  "ratio_pass_threshold": 1,
+  "methods": [
+    {
+      "method": "Residual-based RL",
+      "first_certified_update": 1855,
+      "last_update_checked": 1900,
+      "ratio_at_update_1886": 0.7869948591745067,
+      "ratio_at_update_10000": null
+    },
+    {
+      "method": "SL",
+      "first_certified_update": 1867,
+      "last_update_checked": 1900,
+      "ratio_at_update_1886": 0.9751827531923807,
+      "ratio_at_update_10000": null
+    },
+    {
+      "method": "Fixed-reward RL (threshold 0.02)",
+      "first_certified_update": null,
+      "last_update_checked": 10000,
+      "ratio_at_update_1886": 4.301797079860426,
+      "ratio_at_update_10000": 12.821943879515636
+    }
+  ]
+}

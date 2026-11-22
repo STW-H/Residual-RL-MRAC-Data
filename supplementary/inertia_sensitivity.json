@@ -1,0 +1,31 @@
+{
+  "critic_initialization_seed": 17,
+  "actor_update": 1886,
+  "nominal_second_link_inertia_kg_m2": 0.013333333333333336,
+  "torque_condition": "slow sinusoid",
+  "interval_s": [
+    1,
+    20
+  ],
+  "samples": 951,
+  "rows": [
+    {
+      "second_link_inertia_multiplier": 0.9,
+      "smc_joint_angle_rmse_mrad": 0.027818841213903607,
+      "eid_joint_angle_rmse_mrad": 0.0104897987241558,
+      "eid_reduction_relative_to_smc_percent": 62.292467024424106
+    },
+    {
+      "second_link_inertia_multiplier": 1.0,
+      "smc_joint_angle_rmse_mrad": 0.027927309875210835,
+      "eid_joint_angle_rmse_mrad": 0.010528851302354153,
+      "eid_reduction_relative_to_smc_percent": 62.29908519867897
+    },
+    {
+      "second_link_inertia_multiplier": 1.1,
+      "smc_joint_angle_rmse_mrad": 0.028036124894262403,
+      "eid_joint_angle_rmse_mrad": 0.010568021502261077,
+      "eid_reduction_relative_to_smc_percent": 62.30569830132329
+    }
+  ]
+}

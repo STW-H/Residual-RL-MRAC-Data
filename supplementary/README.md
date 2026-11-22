@@ -1,0 +1,14 @@
+# Additional results for the seed 17 experiment
+
+These data support the numerical checks reported in Section V of *Residual-Based Reinforcement Learning for Model Reference Adaptive Control of Nonlinear Cyber-Physical Systems*. The seed 17 run is separate from the ten paired runs for seeds 1 through 10.
+
+| File | Interpretation and verification |
+|---|---|
+| [Seed 17 certification](seed17_certification.json) | The first certified update is the earliest update at which the sufficient full-operating-region residual check passed. The threshold for the reported ratio is 1, inclusive. The archived update-by-update checks give 1855 for residual-based RL and 1867 for supervised learning. The fixed-reward comparison continues through update 10000. The three ratios at the common tracking checkpoint (update 1886) were recomputed from the frozen actors. |
+| [EID activation](eid_activation.json) | In the separate nominal activation test, the frozen actor controlled the system for 20 s before the EID compensator was enabled. The four entries of the tracking-error vector are the two joint-angle errors followed by the two angular-velocity errors. The reported Lyapunov value was recomputed from the saved switching error and Lyapunov matrix. The sublevel and its two limits are taken from the nominal design certificate. The prescribed initial-error box assumes zero initial observer error and filter state. |
+| [Observer and filter sensitivity](eid_sensitivity.json) | The repeated filter pole and observer-gain multiplier were varied one at a time by 10% about their nominal values of 0.5 and 1.8. The gain matrix is the multiplier times the two-dimensional identity. Joint-angle RMSE values come from the archived simulation summaries. The strict LMI inequalities were rechecked in rational arithmetic using the archived witness for each setting. |
+| [Second-link inertia sensitivity](inertia_sensitivity.json) | Under the slow sinusoidal torque, the second link's moment of inertia about its center of mass was varied by 10%. Both controllers retained their nominal settings. The joint-angle RMSE for each method was recomputed from the archived joint-error samples. The percentage reduction uses the sliding-mode RMSE as its denominator. |
+
+Both sensitivity studies enable compensation at startup with initial joint angles of 0.05 and -0.05 rad and zero angular velocities. The steady-state RMSE is the square root of the mean squared angle error over both joints and all 951 samples from 1 s through 20 s, inclusive. The nominal delayed-activation test uses a separate trajectory.
+
+A null first-certified-update value means that no passing update was observed through the listed horizon. A null ratio at update 10000 means that the method was already outside its recorded observation interval at that update.

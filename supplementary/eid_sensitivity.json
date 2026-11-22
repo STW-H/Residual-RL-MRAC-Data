@@ -1,0 +1,47 @@
+{
+  "critic_initialization_seed": 17,
+  "actor_update": 1886,
+  "torque_condition": "no external torque",
+  "interval_s": [
+    1,
+    20
+  ],
+  "samples": 951,
+  "rows": [
+    {
+      "setting": "nominal",
+      "repeated_filter_pole": 0.5,
+      "observer_gain_multiplier": 1.8,
+      "lmi_feasible": true,
+      "angle_rmse_mrad": 0.0010806227154382926
+    },
+    {
+      "setting": "pole_lower",
+      "repeated_filter_pole": 0.45,
+      "observer_gain_multiplier": 1.8,
+      "lmi_feasible": true,
+      "angle_rmse_mrad": 0.0009793369450524145
+    },
+    {
+      "setting": "pole_higher",
+      "repeated_filter_pole": 0.55,
+      "observer_gain_multiplier": 1.8,
+      "lmi_feasible": true,
+      "angle_rmse_mrad": 0.0012057597903132285
+    },
+    {
+      "setting": "gain_lower",
+      "repeated_filter_pole": 0.5,
+      "observer_gain_multiplier": 1.62,
+      "lmi_feasible": true,
+      "angle_rmse_mrad": 0.001097778809171264
+    },
+    {
+      "setting": "gain_higher",
+      "repeated_filter_pole": 0.5,
+      "observer_gain_multiplier": 1.98,
+      "lmi_feasible": true,
+      "angle_rmse_mrad": 0.0010665862904254678
+    }
+  ]
+}
